@@ -272,7 +272,11 @@ const CarSlider = () => {
     className='container mx-auto h-full  items-center w-full xl:pl-20 xl:mt-8'>
       
         <Swiper
-     
+          breakpoints={{
+            320: {slidesPerView: 1, spaceBetween: 15},
+            640:{slidesPerView: 2, spaceBetween: 32},
+            1260:{slidesPerView: 3, spaceBetween: 32},
+          }}
         >
           <div className='flex'>
           {cars.map((car, index) => {
